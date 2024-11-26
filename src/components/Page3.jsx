@@ -12,7 +12,7 @@ const Page3 = () => {
             Our core value propositions are the foundation of our business
             model. They are the key benefits that we offer to our customers.
             They are the reasons why customers choose us over our competitors.
-            They are the promises that we make to our customers.{" "}
+            They are the promises that we make to our customers.
           </p>
           <div className="core-grid">
             <div className="core-grid-item">

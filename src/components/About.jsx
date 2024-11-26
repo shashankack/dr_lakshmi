@@ -19,7 +19,7 @@ const AboutMe = () => {
     <section className="about-section">
       <div className="about-container">
         <div className="about-image">
-          <img src={about_img} alt="About Me" />
+          <img src={about_img} />
         </div>
         <div className="about-text">
           <h1>About Me</h1>
@@ -29,6 +29,7 @@ const AboutMe = () => {
             libero similique omnis nihil cum dicta.
           </p>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
           <div className="stats-container">
             {statsData.map((data, index) => (
               <div key={index} className="stat-item">

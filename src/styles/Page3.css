@@ -1,77 +1,54 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  height: 100vh;
-  width: 100vw;
-}
-
 .core-section {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  padding: 60px 20px;
+  padding: 60px 30px;
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgb(124, 124, 124));
-  position: relative;
-  overflow: hidden;
 }
 
 .core-container {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  max-width: auto;
-  width: 100%;
-  gap: 50px;
+  justify-content: center;
 }
 
 .core-image {
-  flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 180px;
 }
 
 .core-image img {
-  margin-top: 100px;
-  margin-left: 100px;
-  width: 50%;
+  width: 80%;
   height: auto;
   object-fit: contain;
   border-bottom-right-radius: 200px;
+  border: 1px solid #00000015;
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
 }
 
 .core-text {
   padding: 20px;
   width: 40%;
-  margin-left: 400px;
-  margin-right: -400px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
 .core-text h3 {
   text-wrap: auto;
-  margin: 0;
+  margin-top: -20px;
   font-size: 3rem;
   color: #44662e;
 }
 
 .core-text p {
-  margin: 5px 0 0;
+  margin-top: 15px;
 }
 
 .core-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 40%);
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 .core-grid-item {
@@ -83,4 +60,29 @@ body {
   background-color: #ffffff04;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 480px) {
+  .core-section {
+    padding: 20px;
+    height: auto;
+  }
+
+  .core-container {
+    flex-direction: column;
+    padding: 5%;
+  }
+
+  .core-text {
+    width: 100%;
+  }
+
+  .core-text h3 {
+    font-size: 1.5rem;
+    text-wrap: nowrap;
+  }
+
+  .core-grid {
+    grid-template-columns: repeat(1, 100%);
+  }
 }

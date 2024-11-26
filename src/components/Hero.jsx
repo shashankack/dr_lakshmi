@@ -6,7 +6,6 @@ const Hero = () => {
   return (
     <section className="hero-section">
       <div className="hero-container">
-        {/* Left Content */}
         <div className="hero-text">
           <h1>
             Align with the Frequency of <span>Your Greatest Truth</span>
