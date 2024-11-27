@@ -114,7 +114,7 @@ li i {
 
 /* for mobile screen view */
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 540px) {
 	.footer-items {
 		width: 100%;
 	}

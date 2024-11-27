@@ -121,7 +121,7 @@ nav ul li span:nth-child(4) {
 
 
 /* Mobile Screen */
-@media (max-width: 480px) {
+@media (max-width: 540px) {
   .hero-section {
     margin-top: 50px;
     padding: 40px 5%;

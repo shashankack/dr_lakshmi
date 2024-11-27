@@ -35,7 +35,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div class="footer-items">
+        <div className="footer-items">
           <h3>Services</h3>
           <div class="border1"></div>
           <ul>
