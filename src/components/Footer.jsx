@@ -10,15 +10,15 @@ const Footer = () => {
   };
 
   return (
-    <div class="footer">
-      <div class="inner-footer">
-        <div class="footer-items">
+    <div className="footer">
+      <div className="inner-footer">
+        <div className="footer-items">
           <img src={logo}/>
         </div>
 
-        <div class="footer-items">
+        <div className="footer-items">
           <h3>Quick Links</h3>
-          <div class="border1"></div>
+          <div className="border1"></div>
           <ul>
             <a href="#">
               <li>Link 1</li>
@@ -37,7 +37,7 @@ const Footer = () => {
 
         <div className="footer-items">
           <h3>Services</h3>
-          <div class="border1"></div>
+          <div className="border1"></div>
           <ul>
             <a href="#">
               <li>Service 1</li>
@@ -54,36 +54,36 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div class="footer-items">
+        <div className="footer-items">
           <h3>Contact us</h3>
-          <div class="border1"></div>
+          <div className="border1"></div>
           <ul>
             <li>
-              <i class="fa fa-map-marker" aria-hidden="true"></i>XYZ, abc
+              <i className="fa fa-map-marker" aria-hidden="true"></i>XYZ, abc
             </li>
             <li>
-              <i class="fa fa-phone" aria-hidden="true"></i>123456789
+              <i className="fa fa-phone" aria-hidden="true"></i>123456789
             </li>
             <li>
-              <i class="fa fa-envelope" aria-hidden="true"></i>xyz@gmail.com
+              <i className="fa fa-envelope" aria-hidden="true"></i>xyz@gmail.com
             </li>
           </ul>
 
-          <div class="social-media">
+          <div className="social-media">
             <a href="#">
-              <i class="fab fa-instagram"></i>
+              <i className="fab fa-instagram"></i>
             </a>
             <a href="#">
-              <i class="fab fa-facebook"></i>
+              <i className="fab fa-facebook"></i>
             </a>
             <a href="#">
-              <i class="fab fa-google-plus-square"></i>
+              <i className="fab fa-google-plus-square"></i>
             </a>
           </div>
         </div>
       </div>
 
-      <div class="footer-bottom">Copyright &copy; Optimal Minds 2024.</div>
+      <div className="footer-bottom">Copyright &copy; Optimal Minds 2024.</div>
     </div>
   );
 };

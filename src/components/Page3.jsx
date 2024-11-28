@@ -4,7 +4,7 @@ import "../styles/Page3.css";
 
 const Page3 = () => {
   return (
-    <section className="core-section">
+    <section className="core-section" id="page3">
       <div className="core-container">
         <div className="core-text">
           <h3>Core Value Propositions</h3>

@@ -48,33 +48,35 @@ const Testimonials = ({ speed = 30 }) => {
     },
   ];
   return (
-    <div className="marquee-container">
-      <div className="marquee">
-        <div
-          className="marquee-track"
-          style={{
-            display: "flex",
-            animation: `marquee ${speed}s linear infinite`,
-          }}
-        >
-          {cards.map((card) => (
-            <div key={card.id} className="card">
-              <img src={card.userImg} />
-              <h3>{card.userName}</h3>
-              <p>{card.userMessage}</p>
-            </div>
-          ))}
-          {/* Duplicate cards for seamless scrolling */}
-          {cards.map((card) => (
-            <div key={`clone-${card.id}`} className="card">
-              <img src={card.userImg} />
-              <h3>{card.userName}</h3>
-              <p>{card.userMessage}</p>
-            </div>
-          ))}
+    <section id="testimonials">
+      <div className="marquee-container">
+        <div className="marquee">
+          <div
+            className="marquee-track"
+            style={{
+              display: "flex",
+              animation: `marquee ${speed}s linear infinite`,
+            }}
+          >
+            {cards.map((card) => (
+              <div key={card.id} className="card">
+                <img src={card.userImg} />
+                <h3>{card.userName}</h3>
+                <p>{card.userMessage}</p>
+              </div>
+            ))}
+            {/* Duplicate cards for seamless scrolling */}
+            {cards.map((card) => (
+              <div key={`clone-${card.id}`} className="card">
+                <img src={card.userImg} />
+                <h3>{card.userName}</h3>
+                <p>{card.userMessage}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

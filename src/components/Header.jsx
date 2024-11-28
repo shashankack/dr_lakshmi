@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Header.css";
 import logo from "../assets/wide_green_logo.svg";
+import {HashLink} from 'react-router-hash-link';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,11 +34,12 @@ const Header = () => {
         <a href="#psychotherapy">Holistic Psychotherapy</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a href="#" className="logo"><img src={logo} alt="Logo" /></a>
+      <HashLink smooth to="#hero" className="logo"><img src={logo}/></HashLink>
+      
       <nav className="nav-menu nav-right">
-        <a href="#public-speaking">Public Speaking</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
+        <HashLink smooth to="#about">About</HashLink>
+        <HashLink smooth to="#page3">Page3</HashLink>
+        <HashLink smooth to="#testimonials">Testimonials</HashLink>
       </nav>
       <div
         className={`hamburger ${isMenuOpen ? "active" : ""}`}
@@ -51,9 +53,9 @@ const Header = () => {
         <a href="#energy-healing">Energy Healing</a>
         <a href="#psychotherapy">Holistic Psychotherapy</a>
         <a href="#contact">Contact</a>
-        <a href="#public-speaking">Public Speaking</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
+        <HashLink smooth to="#about">About</HashLink>
+        <HashLink smooth to="#page3">Page3</HashLink>
+        <HashLink smooth to="#testimonials">Testimonials</HashLink>
       </div>
     </header>
   );

@@ -1,23 +1,19 @@
-import React from 'react'
-import Header from './components/Header.jsx';
-import Hero from './components/Hero.jsx';
-import About from './components/About.jsx';
-import Page3 from './components/Page3.jsx';
-import Footer from './components/Footer.jsx';
-import Testimonials from './components/Testimonials.jsx';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import About from "./components/About";
+import Hero from "./components/Hero";
+import Main from "./components/Main";
 
 function App() {
-
   return (
-    <>
-    <Header />
-    <Hero />
-    <About />
-    <Page3 />
-    <Testimonials />
-    <Footer />
-    </>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
+    </Router>
   );
 }
 
-export default App
+export default App;
