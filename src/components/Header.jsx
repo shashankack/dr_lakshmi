@@ -32,7 +32,7 @@ const Header = () => {
       <nav className="nav-menu nav-left">
         <a href="#energy-healing">Energy Healing</a>
         <a href="#psychotherapy">Holistic Psychotherapy</a>
-        <a href="#contact">Contact</a>
+        <HashLink smooth to="#services">Services</HashLink>
       </nav>
       <HashLink smooth to="#hero" className="logo"><img src={logo}/></HashLink>
       

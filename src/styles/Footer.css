@@ -119,3 +119,55 @@ li i {
 		width: 100%;
 	}
 }
+
+
+.footer-items h3 {
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  .dropdown-icon {
+	font-size: 1.2rem;
+	cursor: pointer;
+	color: #fff;
+  }
+  
+  /* Hide sections for smaller screens by default */
+  ul.hidden {
+	display: none;
+  }
+  
+  ul.visible {
+	display: block;
+  }
+  
+  /* Adjust layout for smaller screens */
+  @media screen and (max-width: 540px) {
+	.footer-items {
+	  width: 100%;
+	  padding: 10px 0;
+	}
+  
+	.footer-items h3 {
+	  display: flex;
+	  justify-content: space-between;
+	}
+  
+	.footer-items ul {
+	  margin-top: 10px;
+	  padding-left: 20px;
+	}
+  }
+  
+  /* For larger screens, always show the sections */
+  @media screen and (min-width: 541px) {
+	ul {
+	  display: block;
+	}
+  
+	.dropdown-icon {
+	  display: none; /* Hide dropdown icons on larger screens */
+	}
+  }
