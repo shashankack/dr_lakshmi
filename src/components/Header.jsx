@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Header.css";
 import logo from "../assets/wide_green_logo.svg";
-import {HashLink} from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,6 +19,10 @@ const Header = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -29,18 +33,42 @@ const Header = () => {
 
   return (
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
-      <nav className="nav-menu nav-left">
-        <a href="#energy-healing">Energy Healing</a>
-        <a href="#psychotherapy">Holistic Psychotherapy</a>
-        <HashLink smooth to="#services">Services</HashLink>
+      <nav className="nav-menu">
+        <div className="nav-left">
+          <a href="#energy-healing" onClick={closeMenu}>
+            Energy Healing
+          </a>
+          <a href="#psychotherapy" onClick={closeMenu}>
+            Holistic Psychotherapy
+          </a>
+          <HashLink smooth to="#services" onClick={closeMenu}>
+            Services
+          </HashLink>
+        </div>
       </nav>
-      <HashLink smooth to="#hero" className="logo"><img src={logo}/></HashLink>
-      
-      <nav className="nav-menu nav-right">
-        <HashLink smooth to="#about">About</HashLink>
-        <HashLink smooth to="#page3">Page3</HashLink>
-        <HashLink smooth to="#testimonials">Testimonials</HashLink>
+
+      <HashLink
+        smooth
+        to="#hero"
+        className={`logo ${isScrolled ? "scrolled" : ""}`}
+      >
+        <img src={logo} alt="Logo" />
+      </HashLink>
+
+      <nav className="nav-menu">
+        <div className="nav-right">
+          <HashLink smooth to="#about" onClick={closeMenu}>
+            About
+          </HashLink>
+          <HashLink smooth to="#page3" onClick={closeMenu}>
+            Page3
+          </HashLink>
+          <HashLink smooth to="#testimonials" onClick={closeMenu}>
+            Testimonials
+          </HashLink>
+        </div>
       </nav>
+
       <div
         className={`hamburger ${isMenuOpen ? "active" : ""}`}
         onClick={toggleMenu}
@@ -50,12 +78,24 @@ const Header = () => {
         <span></span>
       </div>
       <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
-        <a href="#energy-healing">Energy Healing</a>
-        <a href="#psychotherapy">Holistic Psychotherapy</a>
-        <HashLink smooth to="#services">Services</HashLink>
-        <HashLink smooth to="#about">About</HashLink>
-        <HashLink smooth to="#page3">Page3</HashLink>
-        <HashLink smooth to="#testimonials">Testimonials</HashLink>
+        <a href="#energy-healing" onClick={closeMenu}>
+          Energy Healing
+        </a>
+        <a href="#psychotherapy" onClick={closeMenu}>
+          Holistic Psychotherapy
+        </a>
+        <HashLink smooth to="#services" onClick={closeMenu}>
+          Services
+        </HashLink>
+        <HashLink smooth to="#about" onClick={closeMenu}>
+          About
+        </HashLink>
+        <HashLink smooth to="#page3" onClick={closeMenu}>
+          Page3
+        </HashLink>
+        <HashLink smooth to="#testimonials" onClick={closeMenu}>
+          Testimonials
+        </HashLink>
       </div>
     </header>
   );

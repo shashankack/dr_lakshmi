@@ -19,14 +19,22 @@ const Hero = () => {
           <div className="hero-buttons">
             <nav>
               <ul>
-                <li>home<span></span><span></span><span></span><span></span></li>
-                <li>products<span></span><span></span><span></span><span></span></li>
+                <li>
+                  home<span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </li>
+                <li>
+                  products<span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </li>
               </ul>
             </nav>
           </div>
         </div>
-
-        {/* Right Content - Image */}
         <div className="hero-image">
           <img src={HeroImage} alt="Hero Section" />
         </div>
