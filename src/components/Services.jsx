@@ -12,6 +12,14 @@ import "../styles/Services.css";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
+import image_1 from "../assets/slider-image-1.jpg";
+import image_2 from "../assets/slider-image-2.jpg";
+import image_3 from "../assets/slider-image-3.jpg";
+import image_4 from "../assets/slider-image-4.jpg";
+import image_5 from "../assets/slider-image-5.jpg";
+import image_6 from "../assets/slider-image-6.jpg";
+import image_7 from "../assets/slider-image-7.jpg";
+
 const Services = () => {
   return (
     <section className="services" id="services">
@@ -38,25 +46,25 @@ const Services = () => {
         className="swiper_container"
       >
         <SwiperSlide>
-          <img src="https://placehold.co/600" alt="slide_image" />
+          <img src={image_1} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://placehold.co/600" alt="slide_image" />
+          <img src={image_2} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://placehold.co/600" alt="slide_image" />
+          <img src={image_3} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://placehold.co/600" alt="slide_image" />
+          <img src={image_4} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://placehold.co/600" alt="slide_image" />
+          <img src={image_5} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://placehold.co/600" alt="slide_image" />
+          <img src={image_6} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://placehold.co/600" alt="slide_image" />
+          <img src={image_7} alt="slide_image" />
         </SwiperSlide>
 
         <div className="slider-controler">

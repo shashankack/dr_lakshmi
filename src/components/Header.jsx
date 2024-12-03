@@ -52,7 +52,7 @@ const Header = () => {
       <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
         <a href="#energy-healing">Energy Healing</a>
         <a href="#psychotherapy">Holistic Psychotherapy</a>
-        <a href="#contact">Contact</a>
+        <HashLink smooth to="#services">Services</HashLink>
         <HashLink smooth to="#about">About</HashLink>
         <HashLink smooth to="#page3">Page3</HashLink>
         <HashLink smooth to="#testimonials">Testimonials</HashLink>
