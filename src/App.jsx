@@ -8,7 +8,6 @@ import Main from "./components/Main";
 function App() {
   return (
     <Router>
-      <Header />
       <Routes>
         <Route path="/" element={<Main />} />
       </Routes>

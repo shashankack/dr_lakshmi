@@ -73,13 +73,13 @@
 
 @media screen and (max-width: 540px) {
   .core-section {
-    padding: 20px;
+    padding: 10px;
     height: auto;
   }
 
   .core-container {
     flex-direction: column;
-    padding: 5%;
+    
   }
 
   .core-text {
@@ -96,7 +96,8 @@
   }
 
   .core-grid {
-    margin-left: -25px;
+    margin-left: -7px;
+    gap: 10px;
     grid-template-columns: repeat(2, 50%);
   }
 }
