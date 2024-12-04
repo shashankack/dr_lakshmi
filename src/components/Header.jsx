@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../styles/Header.css";
 import logo from "../assets/wide_green_logo.svg";
 import { HashLink } from "react-router-hash-link";
+import { gsap } from "gsap";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -16,11 +18,35 @@ const Header = () => {
   };
 
   const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
+    setIsMenuOpen((prev) => {
+      const isOpening = !prev;
+      if (isOpening) {
+        gsap.to(menuRef.current, {
+          duration: 0.5,
+          opacity: 1,
+          height: "auto",
+          ease: "power3.out",
+        });
+      } else {
+        gsap.to(menuRef.current, {
+          duration: 0.5,
+          opacity: 0,
+          height: 0,
+          ease: "power3.in",
+        });
+      }
+      return isOpening;
+    });
   };
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    gsap.to(menuRef.current, {
+      duration: 0.5,
+      opacity: 0,
+      height: 0,
+      ease: "power3.in",
+    });
   };
 
   useEffect(() => {
@@ -77,7 +103,7 @@ const Header = () => {
         <span></span>
         <span></span>
       </div>
-      <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
+      <div className="mobile-menu" ref={menuRef}>
         <a href="#energy-healing" onClick={closeMenu}>
           Energy Healing
         </a>

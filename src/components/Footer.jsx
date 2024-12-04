@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import "../styles/Footer.css";
 import logo from "../assets/wide_white_logo.png";
 
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaGooglePlusG } from "react-icons/fa6";
+
 const Footer = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [openSection, setOpenSection] = useState(null);
@@ -33,11 +37,21 @@ const Footer = () => {
           <h3 onClick={() => isSmallScreen && toggleSection("links")}>
             Quick Links
             {isSmallScreen && (
-              <span className="dropdown-icon">{openSection === "links" ? "-" : "+"}</span>
+              <span className="dropdown-icon">
+                {openSection === "links" ? "-" : "+"}
+              </span>
             )}
           </h3>
-          <div className={`border1 ${isSmallScreen && openSection !== "links" ? "hidden" : ""}`}></div>
-          <ul className={!isSmallScreen || openSection === "links" ? "visible" : "hidden"}>
+          <div
+            className={`border1 ${
+              isSmallScreen && openSection !== "links" ? "hidden" : ""
+            }`}
+          ></div>
+          <ul
+            className={
+              !isSmallScreen || openSection === "links" ? "visible" : "hidden"
+            }
+          >
             <a href="#">
               <li>Link 1</li>
             </a>
@@ -58,11 +72,23 @@ const Footer = () => {
           <h3 onClick={() => isSmallScreen && toggleSection("services")}>
             Services
             {isSmallScreen && (
-              <span className="dropdown-icon">{openSection === "services" ? "-" : "+"}</span>
+              <span className="dropdown-icon">
+                {openSection === "services" ? "-" : "+"}
+              </span>
             )}
           </h3>
-          <div className={`border1 ${isSmallScreen && openSection !== "services" ? "hidden" : ""}`}></div>
-          <ul className={!isSmallScreen || openSection === "services" ? "visible" : "hidden"}>
+          <div
+            className={`border1 ${
+              isSmallScreen && openSection !== "services" ? "hidden" : ""
+            }`}
+          ></div>
+          <ul
+            className={
+              !isSmallScreen || openSection === "services"
+                ? "visible"
+                : "hidden"
+            }
+          >
             <a href="#">
               <li>Service 1</li>
             </a>
@@ -83,11 +109,21 @@ const Footer = () => {
           <h3 onClick={() => isSmallScreen && toggleSection("contact")}>
             Contact us
             {isSmallScreen && (
-              <span className="dropdown-icon">{openSection === "contact" ? "-" : "+"}</span>
+              <span className="dropdown-icon">
+                {openSection === "contact" ? "-" : "+"}
+              </span>
             )}
           </h3>
-          <div className={`border1 ${isSmallScreen && openSection !== "contact" ? "hidden" : ""}`}></div>
-          <ul className={!isSmallScreen || openSection === "contact" ? "visible" : "hidden"}>
+          <div
+            className={`border1 ${
+              isSmallScreen && openSection !== "contact" ? "hidden" : ""
+            }`}
+          ></div>
+          <ul
+            className={
+              !isSmallScreen || openSection === "contact" ? "visible" : "hidden"
+            }
+          >
             <li>
               <i className="fa fa-map-marker" aria-hidden="true"></i> XYZ, abc
             </li>
@@ -95,18 +131,25 @@ const Footer = () => {
               <i className="fa fa-phone" aria-hidden="true"></i> 123456789
             </li>
             <li>
-              <i className="fa fa-envelope" aria-hidden="true"></i> xyz@gmail.com
+              <i className="fa fa-envelope" aria-hidden="true"></i>{" "}
+              xyz@gmail.com
             </li>
           </ul>
           <div className="social-media">
             <a href="#">
-              <i className="fab fa-instagram"></i>
+              <i className="fab fa-instagram">
+                <FaInstagram />
+              </i>
             </a>
             <a href="#">
-              <i className="fab fa-facebook"></i>
+              <i className="fab fa-facebook">
+                <FaFacebook />
+              </i>
             </a>
             <a href="#">
-              <i className="fab fa-google-plus-square"></i>
+              <i className="fab fa-google-plus-square">
+                <FaGooglePlusG />{" "}
+              </i>
             </a>
           </div>
         </div>
