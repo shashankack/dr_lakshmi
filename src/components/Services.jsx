@@ -6,7 +6,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
 import "../styles/Services.css";
 
 // import { MdKeyboardArrowLeft } from "react-icons/md";
@@ -15,7 +15,6 @@ import "../styles/Services.css";
 import image1 from "../assets/image-1.jpg";
 import image2 from "../assets/image-2.jpg";
 import image3 from "../assets/image-3.jpg";
-import image4 from "../assets/image-4.jpg";
 
 const Services = () => {
   return (
@@ -25,13 +24,15 @@ const Services = () => {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
+        autoplay={{ delay: 4500 }}
         loop={true}
         slidesPerView={'auto'}
         coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
+          rotate: 5,
+          stretch: 15,
           depth: 100,
-          modifier: 2.5,
+          modifier: 5,
+          slideShadows: true,
         }}
         pagination={{ el: '.swiper-pagination', clickable: true }}
         navigation={{
@@ -39,9 +40,9 @@ const Services = () => {
           prevEl: '.swiper-button-prev',
           clickable: true,
         }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
+        modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         className="swiper_container"
-      >
+        >
         <SwiperSlide>
           <img src={image1} alt="slide_image" />
         </SwiperSlide>
@@ -52,9 +53,6 @@ const Services = () => {
           <img src={image3} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image4} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
           <img src={image1} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
@@ -64,7 +62,13 @@ const Services = () => {
           <img src={image3} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image4} alt="slide_image" />
+          <img src={image1} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={image2} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={image3} alt="slide_image" />
         </SwiperSlide>
 
         {/* <div className="slider-controler">

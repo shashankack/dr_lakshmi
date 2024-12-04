@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   padding: 60px 30px;
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgb(124, 124, 124));
 }
 
 .core-container {
@@ -86,8 +85,8 @@
     width: 95%;
   }
 
-  .core-image img {
-    width: 80%;
+  .core-image {
+    display: none;
   }
 
   .core-text h3 {
