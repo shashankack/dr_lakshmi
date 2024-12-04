@@ -5,3 +5,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+body {
+  overflow: scroll; /* Enables scrolling */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar for WebKit browsers like Chrome, Safari, and Edge */
+}
