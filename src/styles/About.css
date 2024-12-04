@@ -5,12 +5,12 @@
   align-items: center;
   padding: 60px 20px;
   background: linear-gradient(rgb(124, 124, 124), rgba(255, 255, 255, 0.5));
-  position: relative;
-  overflow: hidden;
 }
 
 .about-container {
+  margin-top: 8rem;
   display: flex;
+  gap: 20px;
   align-items: center;
   justify-content: center;
   max-width: auto;
@@ -18,15 +18,13 @@
 }
 
 .about-image {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .about-image img {
-  width: 40%;
-  height: auto;
+  width: 600px;
   object-fit: contain;
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.4));
 }
@@ -35,14 +33,11 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: flex-start;
-  width: 40%;
-  text-align: start;
+  align-items: start;
+  width: 30%;
 }
 
 .about-text h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
   font-size: 5rem;
   color: #44662e;
 }
@@ -51,20 +46,21 @@
   line-height: 1.6;
   color: #000;
   font-size: 1.05rem;
-  text-align: start;
 }
 
 .stats-container {
   display: flex;
   align-items: center;
+  gap: 10px;
   margin-top: 20px;
   border-radius: 8px;
+  padding: 5% 5%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .stat-item {
   text-align: center;
-  margin: 10px 15px;
+  margin: 5px 15px;
 }
 
 .stat-item h3 {
@@ -81,7 +77,6 @@
 
 @media (max-width: 540px) {
   .about-section {
-    padding: 5% 5%;
     height: auto;
   }
 
@@ -95,12 +90,13 @@
 
   .about-image {
     display: flex;
-    justify-content: center;
+    margin-top: -80px;
+    justify-content: flex-end;
     align-items: center;
   }
 
   .about-image img {
-    width: 100%;
+    width: 80%;
     object-fit: contain;
   }
 
@@ -113,14 +109,15 @@
   }
 
   .about-text h1 {
-    font-size: 28px;
+    font-size: 34px;
     font-weight: bold;
     text-wrap: nowrap;
+    margin-left: -90px;
   }
 
   .about-text p {
-    max-width: auto;
-    width: 200px;
+    font-family: Helvetica;
+    width: 300px;
     font-size: 14px;
   }
 
@@ -136,7 +133,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   }
@@ -150,7 +146,7 @@
   .stat-item p {
     margin-top: 5px;
     font-size: 1em;
-    text-transform:capitalize;
+    text-transform: capitalize;
     color: #296929;
     transform: matrix(1, 0, 0, 1, 0, 0);
     text-align: center;
