@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Testimonials.css";
 import userImage from "../assets/user.png";
 
-const Testimonials = ({ speed = 30 }) => {
+const Testimonials = ({ speed = 50 }) => {
   const cards = [
     {
       id: 1,
@@ -48,7 +48,7 @@ const Testimonials = ({ speed = 30 }) => {
     },
   ];
   return (
-    <section id="testimonials">
+    <section className="testimonials" id="testimonials">
       <div className="marquee-container">
         <div className="marquee">
           <div

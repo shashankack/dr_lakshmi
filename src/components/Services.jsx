@@ -9,10 +9,13 @@ import 'swiper/css/navigation';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import "../styles/Services.css";
 
-import { MdKeyboardArrowLeft } from "react-icons/md";
-import { MdKeyboardArrowRight } from "react-icons/md";
+// import { MdKeyboardArrowLeft } from "react-icons/md";
+// import { MdKeyboardArrowRight } from "react-icons/md";
 
-import image from "../assets/hero_img.png";
+import image1 from "../assets/image-1.jpg";
+import image2 from "../assets/image-2.jpg";
+import image3 from "../assets/image-3.jpg";
+import image4 from "../assets/image-4.jpg";
 
 const Services = () => {
   return (
@@ -40,28 +43,31 @@ const Services = () => {
         className="swiper_container"
       >
         <SwiperSlide>
-          <img src={image} alt="slide_image" />
+          <img src={image1} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image} alt="slide_image" />
+          <img src={image2} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image} alt="slide_image" />
+          <img src={image3} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image} alt="slide_image" />
+          <img src={image4} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image} alt="slide_image" />
+          <img src={image1} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image} alt="slide_image" />
+          <img src={image2} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={image} alt="slide_image" />
+          <img src={image3} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={image4} alt="slide_image" />
         </SwiperSlide>
 
-        <div className="slider-controler">
+        {/* <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">
             <ion-icon name="arrow-back-outline"><MdKeyboardArrowLeft/></ion-icon>
           </div>
@@ -69,7 +75,7 @@ const Services = () => {
             <ion-icon name="arrow-forward-outline"><MdKeyboardArrowRight/></ion-icon>
           </div>
           <div className="swiper-pagination"></div>
-        </div>
+        </div> */}
       </Swiper>
     </div>
     </section>

@@ -1,9 +1,12 @@
+.testimonials {
+  background: linear-gradient(rgb(124, 124, 124), rgba(255, 255, 255, 0.5));
+}
+
 .marquee-container {
   display: flex;
   height: 70vh;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgb(124, 124, 124), rgba(255, 255, 255, 0.5));
   padding: 30px;
 }
 
