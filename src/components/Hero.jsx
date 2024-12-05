@@ -13,7 +13,7 @@ const Hero = () => {
         </div>
 
         <div className="video-container">
-          <video src={reel} autoPlay loop muted className="drlakshmi-vid" />
+          <video src={reel} playsInline autoPlay loop muted className="drlakshmi-vid" />
         </div>
 
         <div className="hero-text">
