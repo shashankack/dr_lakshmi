@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/About.css";
-import about_img from "../assets/about_img.png";
+import about_img from "../assets/dr-lakshmi.jpg";
 
 const AboutMe = () => {
   const statsData = [
@@ -26,9 +26,12 @@ const AboutMe = () => {
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae,
             nobis illo, ipsa minima maxime laudantium eligendi vel, harum ipsum
+            libero similique omnis nihil cum dicta.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae,
+            nobis illo, ipsa minima maxime laudantium eligendi vel, harum ipsum
+            libero similique omnis nihil cum dicta.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae,
+            nobis illo, ipsa minima maxime laudantium eligendi vel, harum ipsum
             libero similique omnis nihil cum dicta.
           </p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
 
           <div className="stats-container">
             {statsData.map((data, index) => (

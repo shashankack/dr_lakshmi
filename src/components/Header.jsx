@@ -76,7 +76,7 @@ const Header = () => {
       <HashLink
         smooth
         to="#hero"
-        className={`logo ${isScrolled ? "scrolled" : ""}`}
+        className={`hero-logo ${isScrolled ? "scrolled" : ""}`}
       >
         <img src={logo} alt="Logo" />
       </HashLink>

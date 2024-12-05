@@ -3,37 +3,41 @@
   justify-content: center;
   height: 100vh;
   align-items: center;
-  padding: 60px 20px;
+  
 }
 
 .about-container {
-  margin-top: 8rem;
+  margin-top: 5rem;
   display: flex;
-  gap: 20px;
   align-items: center;
   justify-content: center;
   max-width: auto;
   width: 100%;
+  height: 100%;
 }
 
 .about-image {
   display: flex;
+  order: 1;
+  width: 40%;
   justify-content: center;
   align-items: center;
 }
 
 .about-image img {
-  width: 600px;
-  object-fit: contain;
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.4));
+  height: 60vh;
+  border-radius: 25px;
 }
 
 .about-text {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: start;
-  width: 30%;
+  align-items: center;
+  width: 40%;
+  margin-left: 5rem;
+  
 }
 
 .about-text h1 {
@@ -43,8 +47,9 @@
 
 .about-text p {
   line-height: 1.6;
+  text-align: left;
   color: #000;
-  font-size: 1.05rem;
+  font-size: 1.09rem;
 }
 
 .stats-container {
@@ -77,6 +82,7 @@
 @media (max-width: 540px) {
   .about-section {
     height: auto;
+    overflow-x: hidden;
   }
 
   .about-container {
@@ -84,19 +90,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    justify-items: center;
   }
 
   .about-image {
     display: flex;
-    margin-top: -80px;
     justify-content: flex-end;
     align-items: center;
-  }
-
-  .about-image img {
+    order: 0;
     width: 80%;
-    object-fit: contain;
+  }
+  
+  .about-image img {
+    width: 100%;
+    border-radius: 25px;
   }
 
   .about-text {
@@ -105,6 +111,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
   }
 
   .about-text h1 {
@@ -118,6 +125,7 @@
     font-family: Helvetica;
     width: 300px;
     font-size: 14px;
+    margin-bottom: 15px;
   }
 
   .logo {
@@ -133,7 +141,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
   }
 
   .stat-item h3 {
