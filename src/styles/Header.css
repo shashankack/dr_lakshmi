@@ -25,12 +25,12 @@ a {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.logo.scrolled {
+.hero-logo.scrolled {
   width: 200px;
   transition: all 0.5s ease;
 }
 
-.logo {
+.hero-logo {
   width: 250px;
   transition: all 0.5s ease;
   margin-left: -70px;
@@ -113,7 +113,12 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 5%;
+    padding: 15px 5%;
+  }
+
+  .hero-logo {
+    margin-left: 10px;
+    width: 200px;
   }
 
   .hamburger {
@@ -124,11 +129,7 @@ a {
     display: none;
   }
 
-  .logo {
-    margin-left: 10px;
-  }
-
-  .logo.scrolled {
+  .hero-logo.scrolled {
     width: 200px;
   }
 

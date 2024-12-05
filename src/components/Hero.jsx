@@ -1,11 +1,21 @@
 import React from "react";
 import HeroImage from "../assets/hero_img.png";
+import reel from "../assets/compressed.mp4";
 import "../styles/Hero.css";
 
 const Hero = () => {
   return (
     <section className="hero-section" id="hero">
       <div className="hero-container">
+        
+        <div className="hero-image">
+          <img src={HeroImage} alt="Hero Section" />
+        </div>
+
+        <div className="video-container">
+          <video src={reel} autoPlay loop muted className="drlakshmi-vid" />
+        </div>
+
         <div className="hero-text">
           <h1>
             Align with the Frequency of <span>Your Greatest Truth</span>
@@ -34,9 +44,6 @@ const Hero = () => {
               </ul>
             </nav>
           </div>
-        </div>
-        <div className="hero-image">
-          <img src={HeroImage} alt="Hero Section" />
         </div>
       </div>
     </section>
