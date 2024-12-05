@@ -1,3 +1,7 @@
+.services {
+  height: auto;
+}
+
 .container {
   max-width: 114rem;
   padding: 4rem 1rem;
@@ -21,7 +25,7 @@
 
 @media (max-width: 540px) {
   .services {
-    height: 100vh;
+    height: auto;
   }
   .swiper_container {
     height: 43rem;
