@@ -1,19 +1,42 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import HeroImage from "../assets/hero_img.png";
 import reel from "../assets/insta-reel.mp4";
+import { CiVolumeMute } from "react-icons/ci";
+import { CiVolumeHigh } from "react-icons/ci";
+
 import "../styles/Hero.css";
 
 const Hero = () => {
+  const videoRef = useRef(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
+
   return (
     <section className="hero-section" id="hero">
       <div className="hero-container">
-        
         <div className="hero-image">
           <img src={HeroImage} alt="Hero Section" />
         </div>
 
         <div className="video-container">
-          <video src={reel} playsInline autoPlay muted loop className="drlakshmi-vid" />
+          <button className="mute-button" onClick={toggleMute}>
+            {isMuted ? <CiVolumeMute size={'25px'}/> : <CiVolumeHigh size={'25px'}/>}
+          </button>
+          <video
+            ref={videoRef}
+            src={reel}
+            playsInline
+            autoPlay
+            muted
+            loop
+            className="drlakshmi-vid"
+          />
         </div>
 
         <div className="hero-text">
