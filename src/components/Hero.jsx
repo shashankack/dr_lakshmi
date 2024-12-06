@@ -1,6 +1,6 @@
 import React from "react";
 import HeroImage from "../assets/hero_img.png";
-import reel from "../assets/placeholder-vid.mp4";
+import reel from "../assets/compressed.mp4";
 import "../styles/Hero.css";
 
 const Hero = () => {
