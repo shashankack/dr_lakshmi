@@ -1,6 +1,6 @@
 import React from "react";
 import HeroImage from "../assets/hero_img.png";
-import reel from "../assets/compressed.mp4";
+import reel from "../assets/insta-reel.mp4";
 import "../styles/Hero.css";
 
 const Hero = () => {
@@ -13,7 +13,7 @@ const Hero = () => {
         </div>
 
         <div className="video-container">
-          <video src={reel} playsInline autoPlay loop muted className="drlakshmi-vid" />
+          <video src={reel} playsInline autoPlay muted loop className="drlakshmi-vid" />
         </div>
 
         <div className="hero-text">
