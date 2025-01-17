@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Testimonials.css";
+
 import avatar1 from "../assets/avatars/avatar-1.jpeg";
 import avatar2 from "../assets/avatars/avatar-2.jpeg";
 import avatar3 from "../assets/avatars/avatar-3.jpeg";

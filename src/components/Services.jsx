@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
-import "../styles/Services.css";
+
 
 // import { MdKeyboardArrowLeft } from "react-icons/md";
 // import { MdKeyboardArrowRight } from "react-icons/md";

@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Page3.css";
+
 
 
 const Page3 = () => {
