@@ -1,8 +1,8 @@
 import { useEffect, useRef, createRef } from "react";
 import "./Home.scss";
 
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -21,10 +21,34 @@ import why4 from "../../assets/why-4.svg";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
-
   const servicesRef = useRef([]);
   servicesRef.current = [];
 
+  useEffect(() => {
+    servicesRef.current.forEach((ref, index) => {
+      gsap.fromTo(
+        ref,
+        { y: 50, autoAlpha: 0 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: 1,
+          ease: "power1.out",
+          scrollTrigger: {
+            trigger: ref,
+            start: "top bottom-=400",
+            toggleActions: "play none none reverse",
+            markers: true,
+          },
+        }
+      );
+    });
+
+    // Cleanup function to kill ScrollTriggers to prevent memory leaks
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
 
   const aboutGrid = [
     {
@@ -117,24 +141,23 @@ const Home = () => {
       <section className="services" id="services">
         <div className="services-container">
           <h2>Our Mental Healthcare Offerings</h2>
-          {/* <div className="services-grid"> */}
-            {servicesGrid.map((service, index) => (
-              <div
-                key={service.id}
-                className={`service ${index % 2 === 0 ? "" : "reverse"}`}
-              >
-                <div className="image-container">
-                  <img src={service.img} alt={service.title} />
-                </div>
-                <div className="text-container">
-                  <h3>{service.title}</h3>
-                  <p>{service.text}</p>
-                  <button>Book Appointment</button>
-                </div>
+          {servicesGrid.map((service, index) => (
+            <div
+              key={service.id}
+              ref={(el) => (servicesRef.current[index] = el)} // Storing refs
+              className={`service ${index % 2 === 0 ? "" : "reverse"}`}
+            >
+              <div className="image-container">
+                <img src={service.img} alt={service.title} />
               </div>
-            ))}
-          </div>
-        {/* </div> */}
+              <div className="text-container">
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+                <button>Book Appointment</button>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );
