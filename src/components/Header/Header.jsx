@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "../../assets/white_logo.png";
 import "./Header.scss";
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);

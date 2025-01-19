@@ -18,38 +18,13 @@ import why2 from "../../assets/why-2.svg";
 import why3 from "../../assets/why-3.svg";
 import why4 from "../../assets/why-4.svg";
 
+import serviceImg1 from "../../assets/mental-health-1.jpg";
+import serviceImg2 from "../../assets/mental-health-2.jpg";
+import serviceImg3 from "../../assets/mental-health-3.jpg";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
-  const servicesRef = useRef([]);
-  servicesRef.current = [];
-
-  useEffect(() => {
-    servicesRef.current.forEach((ref, index) => {
-      gsap.fromTo(
-        ref,
-        { y: 50, autoAlpha: 0 },
-        {
-          y: 0,
-          autoAlpha: 1,
-          duration: 1,
-          ease: "power1.out",
-          scrollTrigger: {
-            trigger: ref,
-            start: "top bottom-=400",
-            toggleActions: "play none none reverse",
-            markers: true,
-          },
-        }
-      );
-    });
-
-    // Cleanup function to kill ScrollTriggers to prevent memory leaks
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
-
   const aboutGrid = [
     {
       id: 1,
@@ -80,23 +55,72 @@ const Home = () => {
   const servicesGrid = [
     {
       id: 1,
-      img: "http://placehold.co/480",
+      img: serviceImg1,
       title: "Cognitive Behavioral Therapy (CBT)",
       text: "CBT is a core component of our psychotherapeutic services, aimed at treating a range of conditions by changing negative patterns of thought and behavior. This evidence-based approach is particularly effective in treating depression, anxiety, and stress.",
     },
     {
       id: 2,
-      img: "http://placehold.co/480",
+      img: serviceImg2,
       title: "Psychotherapy and Counseling",
       text: "We offer individual, couple, family, and group counseling to help our patients deal with a wide array of mental health challenges. Our therapists are skilled in various modalities to support and guide you toward emotional and psychological well-being.",
     },
     {
       id: 3,
-      img: "http://placehold.co/480",
+      img: serviceImg3,
       title: "Specialized Programs for Diverse Conditions",
       text: "Our center offers specialized programs tailored to specific conditions, including dementia, stress, and more, providing targeted interventions designed to meet the unique needs of each patient.",
     },
   ];
+
+  const refs = useRef(
+    servicesGrid.map(() => ({
+      img: createRef(),
+      text: createRef(),
+    }))
+  );
+
+  useEffect(() => {
+    refs.current.forEach((ref, index) => {
+      const imgFromX = index % 2 === 0 ? -200 : 200; // Images slide from left for even indexes, right for odd
+      const textFromX = index % 2 === 0 ? 200 : -200; // Texts slide from right for even indexes, left for odd
+
+      gsap.fromTo(
+        ref.img.current,
+        { x: imgFromX, autoAlpha: 0 },
+        {
+          x: 0,
+          autoAlpha: 1,
+          duration: 1,
+          ease: "power4.inOut",
+          scrollTrigger: {
+            trigger: ref.img.current,
+            start: "top bottom-=200",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ref.text.current,
+        { x: textFromX, autoAlpha: 0 },
+        {
+          x: 0,
+          autoAlpha: 1,
+          duration: 1,
+          ease: "power4.inOut",
+          scrollTrigger: {
+            trigger: ref.text.current,
+            start: "top bottom-=200",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    });
+
+    // Cleanup function to prevent memory leaks
+    return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  }, []);
 
   return (
     <>
@@ -108,6 +132,10 @@ const Home = () => {
             clickable: true,
             dynamicBullets: true,
           }}
+          style={{
+            "--swiper-navigation-color": "#fff",
+            "--swiper-pagination-color": "#fff",
+          }}
           modules={[Pagination, Navigation]}
         >
           <SwiperSlide>
@@ -117,6 +145,7 @@ const Home = () => {
             <video src={carousel2} autoPlay muted playsInline loop />
           </SwiperSlide>
         </Swiper>
+        <div className="overlay-layer"></div>
       </section>
 
       <section className="about-section" id="about-us">
@@ -144,13 +173,12 @@ const Home = () => {
           {servicesGrid.map((service, index) => (
             <div
               key={service.id}
-              ref={(el) => (servicesRef.current[index] = el)} // Storing refs
               className={`service ${index % 2 === 0 ? "" : "reverse"}`}
             >
-              <div className="image-container">
+              <div className="image-container" ref={refs.current[index].img}>
                 <img src={service.img} alt={service.title} />
               </div>
-              <div className="text-container">
+              <div className="text-container" ref={refs.current[index].text}>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
                 <button>Book Appointment</button>
