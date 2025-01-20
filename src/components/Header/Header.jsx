@@ -26,7 +26,7 @@ const Header = () => {
           <img src={logo} className="logo" />
         </a>
       </nav>
-      <div className="navbar-right">
+      <nav className="navbar-right">
         <ul>
           <li>
             <a href="#/blogs">Blogs</a>
@@ -38,7 +38,7 @@ const Header = () => {
             <a href="#/contact">Contact Us</a>
           </li>
         </ul>
-      </div>
+      </nav>
     </header>
   );
 };

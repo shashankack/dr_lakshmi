@@ -9,10 +9,6 @@ const Main = () => {
   return (
     <div>
       <Home />
-      {/*<About />
-        <Services />
-        <Page3 />
-        <Testimonials /> */}
     </div>
   );
 };

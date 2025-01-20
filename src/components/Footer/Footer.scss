@@ -1,7 +1,7 @@
 .footer {
   background-color: #215918;
   color: #fff;
-  padding: 20px 15%;
+  padding: 50px 15% 20px;
   font-family: Arial, sans-serif;
 
   .footer-container {
@@ -51,7 +51,6 @@
       column-gap: 50%;
       text-wrap: nowrap;
 
-
       a {
         color: #fff;
         text-decoration: none;
@@ -71,16 +70,15 @@
       align-items: center;
       gap: 50px;
 
-      .appointment-btn,
-      .whatsapp-btn {
+      .appointment-btn {
         background-color: #fff;
-        width: 200px;
+        width: 210px;
         height: 40px;
         color: #004d00;
         border: none;
         padding: 10px 20px;
         border-radius: 20px;
-        font-size: 14px;
+        font-size: 16px;
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -90,10 +88,21 @@
         &:hover {
           background-color: #e6e6e6;
         }
-
-        svg {
-          font-size: 18px;
-        }
+      }
+      .whatsapp-btn {
+        background-color: transparent;
+        width: 210px;
+        height: 40px;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
       }
     }
   }
@@ -121,16 +130,17 @@
 
   @media (max-width: 768px) {
     .footer-container {
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
+      gap: 40px;
     }
 
     .nav-section {
       gap: 10px;
     }
 
-    .button-section {
-      flex-direction: column;
+    .footer .footer-container .button-section {
+      flex-direction: row;
     }
 
     .contact-section {
