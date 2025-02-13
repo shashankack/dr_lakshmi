@@ -1,15 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Main from "./components/Main";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import AboutFounder from "./pages/AboutFounder";
+import AboutMission from "./pages/AboutMission";
+import AboutCSR from "./pages/AboutCSR";
 
 function App() {
   return (
     <Router>
-      <Header />
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about/founder" element={<AboutFounder />} />
+        <Route path="/about/mission" element={<AboutMission />} />
+        <Route path="/about/csr" element={<AboutCSR />} />
       </Routes>
       <Footer />
     </Router>

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import logo from "../../assets/white_logo.png";
-import "./Header.scss";
+import logo from "../assets/white_logo.png";
+import "../styles/Navbar.scss";
 import { HashLink } from "react-router-hash-link";
 
-const Header = () => {
+const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   return (
@@ -43,4 +43,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

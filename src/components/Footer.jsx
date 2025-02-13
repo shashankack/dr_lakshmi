@@ -7,8 +7,8 @@ import {
   FaPhone,
   FaWhatsapp,
 } from "react-icons/fa";
-import logo from "../../assets/white_logo.png";
-import "./Footer.scss";
+import logo from "../assets/white_logo.png";
+import "../styles/Footer.scss";
 
 const Footer = () => {
   return (
