@@ -46,11 +46,11 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="contact-section">
-        <div className="contact-item">
+      <div className="footer-contact-section">
+        <div className="footer-contact-item">
           <FaEnvelope /> random@mail.com
         </div>
-        <div className="contact-item">
+        <div className="footer-contact-item">
           <FaPhone /> +91 9xxxx xxxx9
         </div>
       </div>
