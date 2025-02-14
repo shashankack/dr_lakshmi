@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FiCheckCircle } from "react-icons/fi";
 import "../styles/HeroSection.scss";
 
-import brainVid from "../assets/videos/brain.mp4";
+import brainVid from "../assets/videos/burude.mp4";
 
 const HeroSection = () => {
   return (

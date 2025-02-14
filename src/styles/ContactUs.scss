@@ -1,0 +1,135 @@
+@import "./variables";
+
+.contact-section {
+  text-align: center;
+  padding: 80px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  background: $light-bg;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $primary-green;
+    margin-bottom: 2rem;
+  }
+
+  .map-container {
+    margin-bottom: 40px;
+    width: 80%;
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border-radius: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .contact-container {
+    display: flex;
+    width: 80%;
+    gap: 50px;
+    justify-content: space-evenly;
+
+    .contact-details {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+
+      .detail-item {
+        background: #f5f5f5;
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+        h3 {
+          font-size: 1.5rem;
+          color: $primary-green;
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 1.1rem;
+        }
+
+        .icon {
+          font-size: 2rem;
+          color: $primary-green;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .contact-form-container {
+      text-align: center;
+      background: #f5f5f5;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      width: 50%;
+
+      h3 {
+        font-size: 1.8rem;
+        color: $primary-green;
+        margin-bottom: 10px;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        input,
+        textarea {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 1rem;
+          width: 100%;
+        }
+
+        textarea {
+          height: 100px;
+        }
+
+        button {
+          padding: 10px;
+          background: $primary-green;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background 0.3s ease-in-out;
+
+          &:hover {
+            background: #35743a;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive Styles
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+
+    .contact-details,
+    .contact-form-container {
+      max-width: 100%;
+    }
+  }
+}
