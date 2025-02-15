@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/AboutCSR.scss";
 import { FaHeartbeat, FaBrain, FaChalkboardTeacher, FaUsers } from "react-icons/fa";
+import BackButton from "../components/BackButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,6 +51,7 @@ const AboutCSR = () => {
   return (
     <section className="about-csr" ref={csrRef}>
       <div className="csr-container">
+        <BackButton />
         <h2>Our Commitment to Mental Health Awareness</h2>
         <p>
           At <strong>Optimal Minds Brain Wellness Clinic</strong>, we believe that

@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../styles/AboutFounder.scss";
+import BackButton from "../components/BackButton";
 
 const AboutFounder = () => {
   return (
     <section className="about-founder">
+      <BackButton />
       <div className="founder-container">
-        {/* Founder Image */}
         <motion.div
           className="founder-image"
           initial={{ opacity: 0, x: -50 }}
@@ -16,7 +17,6 @@ const AboutFounder = () => {
           <img src="https://placehold.co/600x800" alt="Dr. Lakshmi Sanjay" />
         </motion.div>
 
-        {/* Founder Text Content */}
         <motion.div
           className="founder-content"
           initial={{ opacity: 0, x: 50 }}
@@ -38,7 +38,6 @@ const AboutFounder = () => {
         </motion.div>
       </div>
 
-      {/* Vision Section */}
       <div className="vision-section">
         <h3>🔹 Her Vision</h3>
         <p>
@@ -54,7 +53,6 @@ const AboutFounder = () => {
         <img src="https://placehold.co/1200x600" alt="Founder Vision" />
       </div>
 
-      {/* Expertise Section */}
       <div className="expertise-section">
         <h3>🔹 Her Expertise</h3>
         <p>Dr. Lakshmi specializes in:</p>
@@ -67,7 +65,6 @@ const AboutFounder = () => {
         <img src="https://placehold.co/1200x500" alt="Founder Expertise" />
       </div>
 
-      {/* Contributions Section */}
       <div className="contributions-section">
         <h3>🔹 Contributions & Initiatives</h3>
         <p>
@@ -86,7 +83,6 @@ const AboutFounder = () => {
         <img src="https://placehold.co/1200x600" alt="Founder Contributions" />
       </div>
 
-      {/* Message Section */}
       <div className="message-section">
         <h3>🔹 Message from Dr. Lakshmi Sanjay</h3>
         <blockquote>
