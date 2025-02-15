@@ -2,39 +2,10 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/ServicesSection.scss";
-
-import serviceImg1 from "../assets/mental-health-1.jpg";
-import serviceImg2 from "../assets/mental-health-2.jpg";
-import serviceImg3 from "../assets/mental-health-3.jpg";
+import { services } from "../../public/dummyData";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const services = [
-  {
-    title: "Child Neuropsychiatric Disorders",
-    description:
-      "We provide specialized care for Autism, ADHD, Anxiety, Depression, and other childhood behavioral challenges with a holistic, multidisciplinary approach.",
-    img: serviceImg1,
-  },
-  {
-    title: "Adult Neuropsychiatric Disorders",
-    description:
-      "From anxiety, depression, bipolar disorder, PTSD to addiction, we provide evidence-based treatment, counseling, and therapeutic support.",
-    img: serviceImg2,
-  },
-  {
-    title: "Senior Neuropsychiatric Disorders",
-    description:
-      "For individuals above 50, we offer cognitive therapy and rehabilitation for dementia, elderly depression, and neurodegenerative conditions.",
-    img: serviceImg3,
-  },
-  {
-    title: "Personalized Repetitive Transcranial Magnetic Stimulation (PrTMS)",
-    description:
-      "We offer advanced, non-invasive neuromodulation treatments for anxiety, depression, ADHD, addiction disorders, and more.",
-    img: serviceImg1,
-  },
-];
 
 const ServicesSection = () => {
   const servicesRefs = useRef([]);
@@ -86,25 +57,12 @@ const ServicesSection = () => {
       <div className="services-container">
         {services.map((service, index) => (
           <div
-            key={index}
-            className={`service ${index % 2 === 0 ? "" : "reverse"}`}
+            className="service"
+            key={service.id}
+            ref={(el) => (servicesRefs.current[index] = el)}
           >
-            <div
-              className="image-container"
-              ref={(el) =>
-                (servicesRefs.current[index] = {
-                  img: el,
-                  text: servicesRefs.current[index]?.text,
-                })
-              }
-            >
-              <img src={service.img} alt={service.title} />
-            </div>
-
-            <div
-              className="text-container"
-              ref={(el) => (servicesRefs.current[index].text = el)}
-            >
+            <img src={service.img} alt={service.title} ref={(el) => (service.img = el)} />
+            <div ref={(el) => (service.text = el)}>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
             </div>

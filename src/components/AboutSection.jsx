@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import "../styles/AboutSection.scss";
 import { FaUserMd, FaBrain, FaHandsHelping } from "react-icons/fa";
 import aboutImg from "../assets/about-section.jpg";
+import bg from "../assets/bg.png";
+import bg2 from "../assets/bg_2.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +15,7 @@ const AboutSection = () => {
   const imageRef = useRef(null);
   const contentRef = useRef(null);
   const buttonsRef = useRef([]);
+  const bgRef = useRef(null);
   const navigate = useNavigate();
 
   const handleRedirect = (link) => {
@@ -74,67 +77,75 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section className="about-section" ref={aboutRef}>
-      <div className="about-container">
-        <div className="about-image" ref={imageRef}>
-          <img src={aboutImg} alt="About Optimal Minds" />
-        </div>
-
-        <div className="about-content" ref={contentRef}>
-          <h2>Why Choose Optimal Minds?</h2>
-          <p>
-            At Optimal Minds Brain Wellness Clinic, we provide compassionate,
-            holistic psychiatric care through advanced interventions and
-            counseling, offering ethical, science-backed treatments for
-            individuals of all ages, from childhood neurodevelopmental disorders
-            to adult anxiety, PTSD, addiction, and geriatric mental health.
-          </p>
-
-          <div className="about-highlights">
-            <div className="top">
-              <div className="highlight-item">
-                <FaBrain className="icon" />
-                <p>Advanced Science-Based Treatments</p>
-              </div>
-            </div>
-            <div className="bottom">
-              <div className="highlight-item">
-                <FaUserMd className="icon" />
-                <p>Expert Mental Health Professionals</p>
-              </div>
-              <div className="highlight-item">
-                <FaHandsHelping className="icon" />
-                <p>Holistic & Compassionate Care</p>
-              </div>
-            </div>
+    <>
+      <section className="about-section" ref={aboutRef}>
+        <img src={bg} className="bg_1" />
+        <div className="about-container">
+          <div className="about-image" ref={imageRef}>
+            <img src={aboutImg} alt="About Optimal Minds" />
           </div>
 
-          <div className="about-links">
-            <button
-              onClick={() => handleRedirect("/about/founder")}
-              className="about-link"
-              ref={(el) => (buttonsRef.current[0] = el)}
-            >
-              Our Founder’s Vision
-            </button>
-            <button
-              onClick={() => handleRedirect("/about/mission")}
-              className="about-link"
-              ref={(el) => (buttonsRef.current[1] = el)}
-            >
-              Our Approach & Mission
-            </button>
-            <button
-              onClick={() => handleRedirect("/about/csr")}
-              className="about-link"
-              ref={(el) => (buttonsRef.current[2] = el)}
-            >
-              Mental Health Awareness (CSR)
-            </button>
+          <div className="about-content" ref={contentRef}>
+            <h2>Why Choose Optimal Minds?</h2>
+            <p>
+              At Optimal Minds Brain Wellness Clinic, we provide compassionate,
+              holistic psychiatric care through advanced interventions and
+              counseling, offering ethical, science-backed treatments for
+              individuals of all ages, from childhood neurodevelopmental
+              disorders to adult anxiety, PTSD, addiction, and geriatric mental
+              health.
+            </p>
+
+            <div className="about-highlights">
+              <div className="top">
+                <div className="highlight-item">
+                  <FaBrain className="icon" />
+                  <p>Advanced Science-Based Treatments</p>
+                </div>
+              </div>
+              <div className="bottom">
+                <div className="highlight-item">
+                  <FaUserMd className="icon" />
+                  <p>Expert Mental Health Professionals</p>
+                </div>
+                <div className="highlight-item">
+                  <FaHandsHelping className="icon" />
+                  <p>Holistic & Compassionate Care</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="about-links">
+              <button
+                onClick={() => handleRedirect("/about/founder")}
+                className="about-link"
+                ref={(el) => (buttonsRef.current[0] = el)}
+              >
+                Our Founder’s Vision
+              </button>
+              <button
+                onClick={() => handleRedirect("/about/mission")}
+                className="about-link"
+                ref={(el) => (buttonsRef.current[1] = el)}
+              >
+                Our Approach & Mission
+              </button>
+              <button
+                onClick={() => handleRedirect("/about/csr")}
+                className="about-link"
+                ref={(el) => (buttonsRef.current[2] = el)}
+              >
+                Mental Health Awareness (CSR)
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section>
+        <img src={bg2} className="bg_2" />
+      </section>
+    </>
   );
 };
 

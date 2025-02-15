@@ -3,6 +3,21 @@
 .about-section {
   padding: 100px 20px;
   background: $light-bg;
+  position: relative;
+
+  .bg_1 {
+    width: 100%;
+    position: absolute;
+    top: -15%;
+    left: 0;
+  }
+
+  .bg_2 {
+    width: 100%;
+    position: absolute;
+    bottom: -15%;
+    left: 0;
+  }
 
   .about-container {
     display: flex;
