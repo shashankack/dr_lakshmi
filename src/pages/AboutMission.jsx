@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/AboutMission.scss";
 import { FaRegLightbulb, FaUserCheck, FaBrain, FaHandsHelping } from "react-icons/fa";
+import BackButton from "../components/BackButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,6 +33,7 @@ const AboutMission = () => {
 
   return (
     <section className="about-mission">
+      <BackButton />
       <div className="mission-container" ref={(el) => sections.current.push(el)}>
         <h2>Our Approach & Mission</h2>
         <p>

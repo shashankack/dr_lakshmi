@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useNavigate } from "react-router-dom";
 import "../styles/AboutSection.scss";
 import { FaUserMd, FaBrain, FaHandsHelping } from "react-icons/fa";
+import aboutImg from "../assets/about-section.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,43 +76,39 @@ const AboutSection = () => {
   return (
     <section className="about-section" ref={aboutRef}>
       <div className="about-container">
-        {/* Image Section */}
         <div className="about-image" ref={imageRef}>
-          <img src="https://placehold.co/1200x1080" alt="About Optimal Minds" />
+          <img src={aboutImg} alt="About Optimal Minds" />
         </div>
 
-        {/* Content Section */}
         <div className="about-content" ref={contentRef}>
           <h2>Why Choose Optimal Minds?</h2>
           <p>
             At Optimal Minds Brain Wellness Clinic, we provide compassionate,
-            holistic psychiatric care, advanced interventions, and counseling to
-            enhance overall well-being.
-          </p>
-          <p>
-            We believe in ethical, science-backed treatments that address mental
-            health conditions across all ages, from childhood neurodevelopmental
-            disorders to adult anxiety, PTSD, addiction, and geriatric mental
-            health.
+            holistic psychiatric care through advanced interventions and
+            counseling, offering ethical, science-backed treatments for
+            individuals of all ages, from childhood neurodevelopmental disorders
+            to adult anxiety, PTSD, addiction, and geriatric mental health.
           </p>
 
-          {/* Feature Highlights */}
           <div className="about-highlights">
-            <div className="highlight-item">
-              <FaUserMd className="icon" />
-              <p>Expert Mental Health Professionals</p>
+            <div className="top">
+              <div className="highlight-item">
+                <FaBrain className="icon" />
+                <p>Advanced Science-Based Treatments</p>
+              </div>
             </div>
-            <div className="highlight-item">
-              <FaBrain className="icon" />
-              <p>Advanced Science-Based Treatments</p>
-            </div>
-            <div className="highlight-item">
-              <FaHandsHelping className="icon" />
-              <p>Holistic & Compassionate Care</p>
+            <div className="bottom">
+              <div className="highlight-item">
+                <FaUserMd className="icon" />
+                <p>Expert Mental Health Professionals</p>
+              </div>
+              <div className="highlight-item">
+                <FaHandsHelping className="icon" />
+                <p>Holistic & Compassionate Care</p>
+              </div>
             </div>
           </div>
 
-          {/* Links to Internal Pages */}
           <div className="about-links">
             <button
               onClick={() => handleRedirect("/about/founder")}
